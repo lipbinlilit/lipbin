@@ -2,25 +2,27 @@
 #include <vector>
 #include <string> 
 
+using namespace std;
+
 int main(){
-    std::cout << "введите длину массива"<<std::endl;
-    std::int16_t n;
-    std::cin >> n;
-    std::cout << "введите " << n << " чисел массива"<<std::endl;
-    std::vector<int> a(n);
+    cout << "введите длину массива"<<endl;
+    int n;
+    cin >> n;
+    cout << "введите " << n << " чисел массива"<<endl;
+    vector<int> a(n);
     for (int i = 0;i < n;++i) {
-        std::cin >> a[i];
+        cin >> a[i];
     }
     for (int i = 0;i < n - 1;++i) {
         for (int j = i + 1;j < n;++j) {
             if (a[i] > a[j]) {
-                std::swap(a[i], a[j]);
+                swap(a[i], a[j]);
             }
         }
     }
-    std::cout << "отсортированный массив:" << std::endl;
+    cout << "отсортированный массив:" << endl;
     for (int i = 0;i < n;++i) {
-        std::cout << a[i] << " ";
+        cout << a[i] << " ";
     }
 }
 
