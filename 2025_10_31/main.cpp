@@ -1,11 +1,10 @@
 #include "io.hpp"
-#include "sort_operations.hpp"
-#include <vector>
+#include "pve.hpp"
 
 int main() {
     int n = io::input_length();
-    std::vector<int> array = io::input_array(n);
-    sort_operations::selection_sort(array);
-    io::print_array("sorted array:", array);
+    int* array = io::input_array(n);
+    pve::selection_sort(array, n);
+    io::print_array("Sorted array:", array, n);
     return 0;
 }

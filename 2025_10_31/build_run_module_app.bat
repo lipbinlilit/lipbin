@@ -2,7 +2,7 @@
 chcp 1251 > log
 del log
 
-set CPP_FILES="io.cpp sort_operations.cpp main.cpp"
+set CPP_FILES="io.cpp pve.cpp main.cpp"
 set EXE=sort.exe
 set CHARSET="-finput-charset=utf-8 -fexec-charset=windows-1251"
 
