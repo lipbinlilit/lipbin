@@ -1,4 +1,4 @@
-
+﻿#pragma once
 namespace pve {
     struct MenuItem {
         const char* const title;
@@ -7,12 +7,8 @@ namespace pve {
 
         const MenuItem* parent;
 
-        const char* const greeting;
-
         const MenuItem* const* children;
-
+        const int children_count;
     };
-
-
 
 }

@@ -1,4 +1,4 @@
-#include <clocale>
+﻿#include <clocale>
 #include <iostream>
 
 #include "menu.hpp"
@@ -7,12 +7,13 @@
 
 int main() {
     std::setlocale(LC_ALL, "");
-    
-    const pve::MenuItem* current = &pve :: MAIN ;
 
-    do  {
+    const pve::MenuItem* current = &pve::MAIN;
+
+    do {
         current = current->func(current);
     } while (true);
 
     return 0;
+
 }
