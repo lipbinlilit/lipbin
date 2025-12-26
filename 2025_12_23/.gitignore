@@ -1,0 +1,10 @@
+
+build_ninja/
+
+CMakeCache.txt
+CMakeFiles/
+
+*.exe
+*.obj
+
+projects/lib/googletest/
