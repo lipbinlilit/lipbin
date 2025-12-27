@@ -1,5 +1,8 @@
 
+build*/
+build_*/
 build_ninja/
+cmake-build-*/
 
 CMakeCache.txt
 CMakeFiles/
@@ -8,3 +11,35 @@ CMakeFiles/
 *.obj
 
 projects/lib/googletest/
+
+*.d
+
+*.slo
+*.lo
+*.o
+
+*.gch
+*.pch
+
+*.ilk
+
+*.pdb
+*.ii
+*.s
+
+*.so
+*.dylib
+*.dll
+
+*.mod
+*.smod
+
+*.lai
+*.la
+*.a
+*.lib
+
+*.out
+*.app
+
+*.dwo
