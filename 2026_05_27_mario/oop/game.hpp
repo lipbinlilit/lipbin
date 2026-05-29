@@ -2,10 +2,11 @@
 #define GAME_HPP
 
 #include "game_object.hpp"
+#include "board.hpp"
 
 class Game {
 private:
-    char map[mapHeight][mapWidth + 1];
+    Board board;
     GameObject mario;
     GameObject* brick;
     GameObject* moving;
@@ -21,9 +22,7 @@ public:
     void run();
 
 private:
-    void clearMap();
-    void showMap();
-    void setCur(int x, int y);
+    
     void horizonMoveMap(float dx);
     void horizonMoveObject(GameObject* obj);
     void vertMoveObject(GameObject* obj);
@@ -33,7 +32,7 @@ private:
     GameObject* getNewBrick();
     GameObject* getNewMoving();
     void createLevel(int lvl);
-    void putScoreOnMap();
+    
 };
-
 #endif
+

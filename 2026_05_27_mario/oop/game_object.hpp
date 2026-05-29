@@ -37,8 +37,6 @@ public:
     void addVertSpeed(float delta);
 
     BOOL isCollision(const GameObject& other) const;
-    void putOnMap(char map[mapHeight][mapWidth + 1]) const;
-    static BOOL isPosInMap(int x, int y);
 };
 
 #endif

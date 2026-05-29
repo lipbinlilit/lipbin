@@ -7,4 +7,5 @@ add_executable(mario_game
     game_object.cpp
     game.cpp
     main.cpp
+    board.cpp
 )

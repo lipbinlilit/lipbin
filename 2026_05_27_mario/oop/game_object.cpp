@@ -38,18 +38,3 @@ BOOL GameObject::isCollision(const GameObject& other) const {
         ((y + height) > other.y) && (y < (other.y + other.height));
 }
 
-void GameObject::putOnMap(char map[mapHeight][mapWidth + 1]) const {
-    int ix = (int)round(x);
-    int iy = (int)round(y);
-    int iWidth = (int)round(width);
-    int iHeight = (int)round(height);
-
-    for (int i = ix; i < (ix + iWidth); ++i)
-        for (int j = iy; j < (iy + iHeight); ++j)
-            if (isPosInMap(i, j))
-                map[j][i] = cType;
-}
-
-BOOL GameObject::isPosInMap(int x, int y) {
-    return ((x >= 0) && (x < mapWidth) && (y >= 0) && (y < mapHeight));
-}
