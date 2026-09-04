@@ -98,7 +98,11 @@ void Game::horizonMoveObject(GameObject* obj) {
 
 void Game::vertMoveObject(GameObject* obj) {
     obj->setIsFly(TRUE);
-    obj->addVertSpeed(0.05f);
+
+    if (obj->getType() != '=') {
+        obj->addVertSpeed(0.05f);
+    }
+
     obj->setPos(obj->getX(), obj->getY() + obj->getVertSpeed());
 
     for (int i = 0; i < brickLength; ++i) {
@@ -205,6 +209,10 @@ void Game::createLevel(int lvl) {
         getNewBrick()->init(210, 15, 10, 10, '+');
         getNewMoving()->init(25, 10, 3, 2, 'o');
         getNewMoving()->init(80, 10, 3, 2, 'o');
+
+        GameObject* platform = getNewMoving();
+        platform->init(40, 15, 8, 1, '=');
+        platform->setHorizonSpeed(0.1f);
     }
 
     if (lvl == 2) {
